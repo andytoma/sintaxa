@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="profile">
+    <!-- Datele utilizatorului -->
+  </div>
+
+  <script>
+
+  var my_user = {
+    name:"Pugaciova",
+    weight: 171,
+    gen: "masculin",
+    bdate: "1995-12-02",
+    married:false,
+    likes: 10000,
+    avatar: "https://pics.me.me/funny-avatar-mr-bean-38760714.png",
+    languages:["English", "Romain", "Russish"],
+    like_icon:"http://icons.iconarchive.com/icons/martz90/hex/32/facebook-like-icon.png",
+
+    friends: [],
+
+    showProfile: function(){
+      var div = document.getElementById('profile');
+      var langs ='<ul><li>'+ this.languages.join("</li><li>") + '</li></ul>';
+      console.log(langs);
+      var html = `
+          <div>
+            <h2> ${this.name} <small>(${this.bdate})</small> </h2>
+            <img src="${this.avatar}" width="180px" >
+            <hr>
+            ${langs}
+          </div>
+          <button> <img src="${this.like_icon}"  height="20px" alt="" />  ${this.likes} Like</button>
+      `;
+      div.innerHTML = html;
+    },
+  };
+
+my_user.showProfile();
+
+  </script>
+
+</body>
+</html>

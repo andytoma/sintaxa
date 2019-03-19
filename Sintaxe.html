@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+
+var dog = {
+  name: "Zveri",
+  furr: true,
+  race:"Senbernar",
+  weight: 200,
+
+  bark: function(){
+    console.log("RRRRRRRR....!!!!!");
+  },
+  eat: function( what ){
+    if (what == carne) {
+      console.log("I am eating!");
+    }else {
+      console.log("I am NOT eating!");
+    }
+  },
+  who: function(){
+    console.log("This is a DOG");
+    console.log(`it's name is ${this.name}`);
+    console.log(`acest ciine are blana??? ${this.furr}`);
+    console.log("Ce rasa este acest ciine " + this.race);
+    console.log("ce lungime are " + this.weight);
+  },
+};
+
+console.log(dog.name);
+  dog.bark();
+  // dog.eat();
+  dog.who();
+
+</script>
+
+
+
+</body>
+</html>
